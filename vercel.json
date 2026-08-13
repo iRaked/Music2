@@ -2,7 +2,7 @@
   "version": 2,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "handle": "filesystem" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
@@ -14,14 +14,14 @@
       ]
     },
     {
-      "source": "/assets/(.*).(mp3|MP3|m4a|ogg|wav)",
+      "source": "/assets/(.*)\\.(mp3|MP3|m4a|ogg|wav)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Content-Type", "value": "audio/mpeg" }
       ]
     },
     {
-      "source": "/assets/(.*).(jpg|jpeg|png|gif|webp)",
+      "source": "/assets/(.*)\\.(jpg|jpeg|png|gif|webp)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
